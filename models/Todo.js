@@ -1,10 +1,9 @@
-const {Schema, model} = require('mongoose')
-
+const {Schema} = require('mongoose')
 
 const Todo = new Schema ({
-    title: String,
+    title: {type: String},
     completed: {type: Boolean, default: false},
-    important: {type: Boolean, default: false},
+    important: {type: Boolean, default: false}
 })
 
-module.exports = model("Todo", Todo)
+module.exports = Todo
